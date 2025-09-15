@@ -19,12 +19,6 @@ This script installs and configures:
 Run this one-liner to automatically set up your terminal:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/phuong0111/terminal-setup/main/setup-terminal.sh | bash
-```
-
-Or download and run manually:
-
-```bash
 wget https://raw.githubusercontent.com/phuong0111/terminal-setup/main/setup-terminal.sh
 chmod +x setup-terminal.sh
 ./setup-terminal.sh
