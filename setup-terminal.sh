@@ -78,11 +78,17 @@ sed -i 's/^plugins=(git)$/plugins=(git zsh-autosuggestions zsh-syntax-highlighti
 # Update theme
 sed -i 's/^ZSH_THEME="robbyrussell"$/ZSH_THEME="agnoster"/' "$HOME/.zshrc"
 
+# Source the updated .zshrc to apply changes immediately
+echo "🔄 Reloading zsh configuration..."
+if [ "$SHELL" = "$(which zsh)" ]; then
+    source "$HOME/.zshrc" 2>/dev/null || echo "⚠️  Note: Some plugins may require a fresh terminal session to work properly"
+fi
+
 echo "✅ Terminal setup complete!"
 echo ""
 echo "🎉 Next steps:"
-echo "1. Run 'chsh -s $(which zsh)' to set zsh as your default shell"
-echo "2. Log out and log back in, or restart your terminal"
+echo "1. Run 'chsh -s $(which zsh)' to set zsh as your default shell (if not already done)"
+echo "2. For best results, restart your terminal or open a new tab"
 echo "3. Your old .zshrc has been backed up to .zshrc.backup"
 echo ""
 echo "📝 Note: The agnoster theme works best with Powerline fonts."
