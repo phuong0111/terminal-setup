@@ -44,6 +44,7 @@ chmod +x setup-terminal.sh
 4. Clones additional plugin repositories
 5. Backs up your existing `.zshrc` configuration
 6. Updates `.zshrc` with new plugins and theme settings
+7. Sources the updated configuration to apply changes immediately
 
 ## Configuration Changes
 
@@ -59,7 +60,11 @@ The script modifies your `~/.zshrc` file:
    chsh -s $(which zsh)
    ```
 
-2. **Restart your terminal** or log out and back in
+2. **Start using zsh immediately**:
+   ```bash
+   zsh
+   ```
+   Or restart your terminal/open a new tab
 
 3. **Configure your terminal font** to use a Powerline font for best results with the agnoster theme
 
